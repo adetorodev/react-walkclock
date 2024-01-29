@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Styled from 'styled-component'
 
 
 const Clock = () => {
@@ -7,8 +7,10 @@ const Clock = () => {
   return (
     <div>
         <div className='hour'></div>
-        <div className='minute'></div>
-        <div className='second'></div>
+        <div className='min'></div>
+        <div className='sec'>
+            <SecondHand></SecondHand>
+        </div>
         <div className='number number1'>1</div>
         <div className='number number2'>2</div>
         <div className='number number3'>3</div>
@@ -26,3 +28,20 @@ const Clock = () => {
 }
 
 export default Clock
+
+const SecondHand = Styled.div`
+&:before(
+    content: ;
+    position: absolute;
+    width:5px;
+    height:150px;
+    background: #ffbe0b;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+    bottom: 113px
+)
+display: flex;
+position: absolute;
+width: 230px;
+height: 230px;
+`
