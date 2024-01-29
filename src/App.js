@@ -3,7 +3,9 @@ import Clock from './clock/Clock.jsx'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className='container'>
+      <Clock />
+    </div>
   )
 }
 
